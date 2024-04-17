@@ -31,7 +31,7 @@ const Home = () => {
 };
 
 const backgroundStyle = {
-  backgroundImage: "url('images/1.gif')", // Replace '/path/to/your/image.jpg' with the actual path to your image
+  backgroundImage: "url('/images/1.gif')", // Fixed the URL to start with /images/
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   minHeight: '100vh',
