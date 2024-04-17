@@ -26,18 +26,20 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <img src="/images/1.gif" alt="Background" style={imgStyle} />
     </div>
   );
 };
 
 const backgroundStyle = {
-  backgroundImage: "url('/images/1.gif')", // Use an absolute path without '/images/' prefix
+  position: 'relative', // Required for positioning the image
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   minHeight: '100vh',
 };
 
 const containerStyle = {
+  position: 'relative', // Required for positioning the content
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -45,6 +47,7 @@ const containerStyle = {
 };
 
 const contentStyle = {
+  position: 'relative', // Required for stacking the content above the image
   textAlign: 'center',
   marginBottom: '20rem',
 };
@@ -72,6 +75,15 @@ const buttonStyle = {
   borderRadius: '5px',
   cursor: 'pointer',
   transition: 'background-color 0.3s ease',
+};
+
+const imgStyle = {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  zIndex: -1,
 };
 
 export default Home;
