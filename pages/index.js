@@ -77,7 +77,7 @@ const buttonContainerStyle = {
 const buttonStyle = {
   padding: '0.5rem 1rem',
   fontSize: '1rem',
-  marginBottom: '25rem', // Add space below the text
+  marginBottom: '20rem', // Add space below the text
   fontWeight: 'bold',
   margin: '0.5rem',
   backgroundColor: '#007bff',
