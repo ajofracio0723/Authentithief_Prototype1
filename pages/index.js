@@ -14,9 +14,13 @@ const Home = () => {
   };
 
   return (
-    <div style={backgroundStyle}>
+    <div style={containerStyle}>
+      <video autoPlay loop muted style={backgroundVideoStyle}>
+        <source src="/videos/2.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <Header />
-      <div style={containerStyle}>
+      <div style={centerContent}>
         <div style={contentStyle}>
           <h1 style={titleStyle}>Welcome to Authentithief</h1>
           <p style={textStyle}>Revolutionizing anti-counterfeit with blockchain technology.</p>
@@ -26,38 +30,44 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <img src="/images/1.gif" alt="Background" style={imgStyle} />
     </div>
   );
 };
 
-const backgroundStyle = {
-  position: 'relative', // Required for positioning the image
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  minHeight: '100vh',
+const containerStyle = {
+  position: 'relative',
 };
 
-const containerStyle = {
-  position: 'relative', // Required for positioning the content
+const backgroundVideoStyle = {
+  position: 'fixed',
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  zIndex: -1,
+};
+
+const centerContent = {
   display: 'flex',
-  alignItems: 'center',
+  flexDirection: 'column',
   justifyContent: 'center',
-  minHeight: '100vh',
+  alignItems: 'center',
+  minHeight: 'calc(100vh - 64px)', // Adjust this to account for the header height
 };
 
 const contentStyle = {
-  position: 'relative', // Required for stacking the content above the image
   textAlign: 'center',
-  marginBottom: '20rem',
+  position: 'relative',
+  zIndex: 1,
 };
 
 const titleStyle = {
-  fontWeight: 'bold', // Make the title bolder
+  fontWeight: 'bold',
+  marginTop: '2rem', // Move the title higher
 };
 
 const textStyle = {
-  fontSize: '1.2rem', // Increase the font size of the text below the title
+  fontSize: '1.2rem',
+  marginBottom: '2rem', // Add space below the text
 };
 
 const buttonContainerStyle = {
@@ -67,6 +77,7 @@ const buttonContainerStyle = {
 const buttonStyle = {
   padding: '0.5rem 1rem',
   fontSize: '1rem',
+  marginBottom: '25rem', // Add space below the text
   fontWeight: 'bold',
   margin: '0.5rem',
   backgroundColor: '#007bff',
@@ -75,15 +86,6 @@ const buttonStyle = {
   borderRadius: '5px',
   cursor: 'pointer',
   transition: 'background-color 0.3s ease',
-};
-
-const imgStyle = {
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  width: '100%',
-  height: '100%',
-  zIndex: -1,
 };
 
 export default Home;
