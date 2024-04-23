@@ -63,11 +63,13 @@ const contentStyle = {
 const titleStyle = {
   fontWeight: 'bold',
   marginTop: '2rem', // Move the title higher
+  color: '#ffffff'
 };
 
 const textStyle = {
   fontSize: '1.2rem',
   marginBottom: '2rem', // Add space below the text
+  color: '#ffffff'
 };
 
 const buttonContainerStyle = {
